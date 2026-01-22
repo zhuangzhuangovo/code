@@ -43,7 +43,7 @@ for k = N+1:N+L
 end
 obj = obj + penalty_weight*norm(delta1, 'fro');
 if noise_flag
-    obj = obj + 1000*(norm(alpha_opt,'fro') + 1000 * norm(sigma_y,'fro'));
+    obj = obj + 1*(norm(alpha_opt,'fro') + 1000 * norm(sigma_y,'fro'));
 end
 minimize(obj)
 
